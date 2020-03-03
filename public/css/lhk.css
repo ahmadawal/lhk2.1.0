@@ -1,0 +1,120 @@
+body {
+  background: rgb(81,166,170);
+  background: linear-gradient(77deg, rgba(81,166,170,1) 0%, rgba(75,168,193,1) 35%, rgba(0,212,255,1) 75%);
+}
+
+.container {
+  background-color: rgba(52, 65, 64, 0.3);
+  /* background-color: #262c30be; */
+  /* background-color: #000;
+  opacity: 0.7;
+  filter: alpha(opacity=30); */
+  color: #fff;
+}
+
+.form-lhk {
+  align-items: center;
+  padding: 5px;
+}
+
+/* Chrome, safari edge opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.form-lhk input{
+  font-size: medium;
+  background: none;
+  border-bottom: solid 1px #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-lhk select{
+  background: none;
+  border-bottom: solid 1px #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-lhk textarea{
+  background: none;
+  border-bottom: solid 1px #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-lhk input[readonly]{
+  background: none;
+  border-bottom: solid 1px #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-lhk textarea:focus {
+  background: none;
+  border-bottom: solid 1px #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-lhk input:focus {
+  background: none;
+  border-bottom: solid 1px rgb(99, 99, 99);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.form-lhk input::placeholder {
+  color: rgb(233, 233, 233, 0.5);
+}
+
+/* .form-lhk input[autocomplete]{
+  background-color: none;
+} */
+
+.row-btn-submit {
+  padding-bottom: 15px;
+}
+
+hr {
+  border-color:#000;
+}
+
+.col-form-label {
+  text-align: right !important;
+}
+
+ul a {
+  color: #f8f8f8 !important;
+  background-color: rgb(21, 35, 39) !important;
+}
+ul a:active {
+  color: #fff !important;
+  background-color: rgb(8, 112, 231) !important;
+}
