@@ -14,27 +14,27 @@
     <div class="table-container">
       <table class="table-lhk table table-bordered">
         @foreach ($data as $item)
-        <tr id="row-1">
+        <tr id="row-1" style="padding: 20px">
           <td colspan="10" class="pt_name">PT.JEMBO CABLE COMPANY Tbk.</td>
-          <td class="no-lhk"colspan="4">No. LHK : {{ $item->id_lhk }}</td>
+          <td class="no-lhk" colspan="4" style="padding-right: 10px">No. LHK : {{ $item->id_lhk }}</td>
         </tr>
   
         <tr id="row-2">
-          <td colspan="13" class="judul">LAPORAN HASIL KERJA</td>
+          <td colspan="13" class="judul" style="margin-bottom: 20px">LAPORAN HASIL KERJA</td>
           <td class="offset-tb"></td>
         </tr>
   
         <tr id="row-3">
           <td class="no-border" colspan="2">NO. MESIN</td>
-          <td colspan="6" class="no-border">: {{ $item->mesin_id }}</td>
-          <td class="text-center h-meter">SHIFT</td>
+          <td colspan="6" class="no-border">: {{ $item->m_code }}</td>
+          <td class="text-center h-meter" style="width: 80px">SHIFT</td>
           <td class="text-center h-meter">JAM</td>
-          <td colspan="" class="text-center h-meter">HOUR METER MESIN</td>
+          <td colspan="" class="text-center h-meter" style="width: 150px">HOUR METER MESIN</td>
           <td colspan="2" class="text-center h-meter">Total [Jam]</td>
           <td rowspan="4" class="pinggir"></td>
         </tr>
         @php
-              switch ($item->shift_pgw) {
+              switch ($item->sh_id) {
                 case 1:
                   $jm = '06:45';
                   $jk = '15:15';
@@ -55,18 +55,25 @@
           @endphp
         <tr id="row-4">
           <td class="no-border" colspan="2">NAMA MESIN</td>
-          <td colspan="6" class="no-border">: {{ $item->mesin_nama }}</td>
-          <td rowspan="2" class="shift-pgw h-meter">{{ $item->shift_pgw }}</td>
+          <td colspan="6" class="no-border">: {{ $item->m_name }}</td>
+          <td rowspan="2" class="shift-pgw h-meter">{{ $item->sh_d }}</td>
           <td class="h-meter text-center">{{ $jm }}</td>
-          <td class="text-center">{{ $item->meter_sb }}</td>
-          <td rowspan="2" colspan="2" style="" class="h-meter text-center">{{ $item->total_jam }}</td>
+          <td class="text-center">{{ $item->h_b }}</td>
+          <td rowspan="2" colspan="2" style="" class="h-meter text-center">
+            @php
+                $b = $item->h_b;
+                $a = $item->h_a;
+                $c = $a - $b;
+                echo $c;
+            @endphp
+          </td>
         </tr>
   
         <tr id="row-5">
           <td class="no-border" colspan="2">TANGGAL</td>
           <td colspan="6" class="offset-tb no-border">:
             @php
-                $dt = $item->tgl_mulai;
+                $dt = $item->tgl;
                 $d = explode(" ", $dt);
                 $tgl = date("d-m-Y", strtotime($d[0]));
                 echo $tgl;
@@ -74,7 +81,7 @@
           </td>
           
           <td class="h-meter text-center">{{ $jk }}</td>
-          <td class="text-center">{{ $item->meter_sd }}</td>
+          <td class="text-center">{{ $item->h_a }}</td>
         </tr>
   
         <tr>
@@ -120,29 +127,26 @@
               <br>
             ( Meter )
           </th>
-          <th colspan="2">Warna</th>
+          <th colspan="2" style="padding-left: 2px; padding-right: 2px;">Warna</th>
         </tr>
         {{-- input --}}
         <tr id="row-8" class="input-lhk">
           <td>
-            @php
-              $dt = $item->tgl_mulai;
-              $d = explode(" ", $dt);
-              $jam = $d[1];
-              echo $jam;
-            @endphp
+
           </td>
-          <td colspan="2">{{ $item->kegiatan }}</td>
-          <td>{{ $item->proses_type }}</td>
-          <td>{{ $item->so_no }}</td>
-          <td>{{ $item->customer }}</td>
-          <td>{{ $item->op_no }}</td>
-          <td>{{ $item->speed_line }}</td>
+          <td colspan="2">
+
+          </td>
+          <td>{{ $item->type }}</td>
+          <td>{{ $item->sono }}</td>
+          <td>{{ $item->cus }}</td>
+          <td>{{ $item->opno }}</td>
+          <td>{{ $item->spe }}</td>
           <td>{{ $item->rpm }}</td>
-          <td colspan="">{{ $item->target_panjang }}</td>
-          <td colspan="">{{ $item->bobin_id }}</td>
-          <td colspan="">{{ $item->panjang_fg }}</td>
-          <td colspan="2">{{ $item->warna_fg }}</td>
+          <td colspan="">{{ $item->tar}}</td>
+          <td colspan="">{{ $item->bid }}</td>
+          <td colspan="">{{ $item->pan }}</td>
+          <td colspan="2">{{ $item->war }}</td>
         </tr>
         {{-- end input --}}
   
@@ -185,22 +189,22 @@
         <tr></tr>
         <tr class="text-center ttd">
           <td colspan="3" class="offset-tb">
-            @if ($item->manager)
-                {{ $item->manager }}
+            @if ($item->mgr)
+                {{ $item->mgr }}
             @else
               <a href="{{ route('approvemn', ['id' => $item->id_lhk]) }}" class="btn btn-apr" id="manager">Approve</a>
             @endif
           </td>
           <td colspan="3" class="no-right-border">
-            @if ($item->supervisor)
-                {{ $item->supervisor }}
+            @if ($item->spv)
+                {{ $item->spv}}
             @else
               <a href="{{ route('approvesv', ['id' => $item->id_lhk]) }}" class="btn btn-apr" id="supervisor">Approve</a>
             @endif
           </td>
           <td colspan="3" class="no-right-border">
-            @if ($item->foreman)
-                {{ $item->foreman }}
+            @if ($item->frm)
+                {{ $item->frm}}
             @else
               <a href="{{ route('approvefr', ['id' => $item->id_lhk]) }}" class="btn btn-apr" id="foreman">Approve</a>
             @endif
@@ -212,7 +216,7 @@
           <td colspan="3">Supervisor</td>
           <td colspan="3">Foreman</td>
           <td colspan="5">
-            {{ $item->operator1.'/'.$item->operator2 }}
+            {{ $item->op1.'/'.$item->op2 }}
             <br>
             Operator
           </td>

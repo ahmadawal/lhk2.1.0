@@ -5,13 +5,13 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Laporan Harian Kabel</h1>
+          <h1 class="m-0 text-dark">Laporan Hasil Kerja</h1>
         </div>
       </div>
     </div>
   </div>
   <section class="content">
-    <div class="col-md-7">
+    <div class="col-sm-7">
       <div class="container-fluid">
         <div class="card card-info">
           <div class="card-header">

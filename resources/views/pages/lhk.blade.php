@@ -34,6 +34,17 @@
               </div>
             @endforeach
           </div>
+
+          <div class="form-group row col-sm-12 col-md-7" id="bi1">
+            <label for="hm" class="col-sm-3 col-form-label">Hour meter</label>
+            <div class="col-sm-9 input-group input-group-sm"  id="hm">
+              <div class="input-group-append">
+                <i class="fas fa-clock-o" aria-hidden="true"></i>
+              </div>
+              <input type="number" class="form-control form-control-sm" placeholder="Sebelum" name="hb">
+              <input type="number" class="form-control form-control-sm" placeholder="Sesudah" name="ha">
+            </div>
+          </div>
           
           <div class="form-group row col-sm-6 col-md-7">
             <label for="r2" class="col-sm-3 col-form-label">Shift</label>
@@ -243,8 +254,8 @@
             <label for="bo1" class="col-sm-3 col-form-label">Bobin</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo1">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb1">
                   <i class="fas fa-plus"></i>
                 </button>
@@ -255,8 +266,8 @@
             <label for="bo2" class="col-sm-3 col-form-label">Bobin 2</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo2">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid2">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan2">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan2">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb2">
                   <i class="fas fa-plus"></i>
                 </button>
@@ -267,8 +278,8 @@
             <label for="bo3" class="col-sm-3 col-form-label">Bobin 3</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo3">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid3">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan3">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan3">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb3">
                   <i class="fas fa-plus"></i>
                 </button>
@@ -279,8 +290,8 @@
             <label for="bo4" class="col-sm-3 col-form-label">Bobin 4</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo4">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid4">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan4">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan4">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb4">
                   <i class="fas fa-plus"></i>
                 </button>
@@ -291,8 +302,8 @@
             <label for="bo5" class="col-sm-3 col-form-label">Bobin 5</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo5">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid5">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan5">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan5">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb5">
                   <i class="fas fa-plus"></i>
                 </button>
@@ -303,8 +314,8 @@
             <label for="bo6" class="col-sm-3 col-form-label">Bobin 6</label>
             <div class="col-sm-9 input-group input-group-sm"  id="bo6">
               <input type="text" class="form-control" placeholder="No. Bobin" name="bid6">
+              <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan6">
               <div class="input-group-append">
-                <input type="text" class="form-control form-control-sm" placeholder="Panjang(m)" name="pan6">
                 <button class="btn btn-primary btn-sm mb-3" type="button" id="bb6">
                   <i class="fas fa-plus"></i>
                 </button>

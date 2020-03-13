@@ -30,13 +30,13 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  
+  <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.min.css">
   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-
+  @stack('style')
   <link rel="stylesheet" href="css/detail.css">
 
-  <!-- jQuery -->
-  <script src="plugins/jquery/jquery.min.js"></script>
+
+  {{-- <script src="js/jquery-1.7.2.min.js"></script> --}}
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -55,7 +55,8 @@
 </div>
 <!-- ./wrapper -->
 
-
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -64,13 +65,9 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
+
 <!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -85,12 +82,18 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+{{-- <script src="dist/js/pages/dashboard.js"></script> --}}
+{{-- <script src="dist/js/pages/dashboard3.js"></script> --}}
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
-
 @stack('script')
-
+<script>
+  $(function(){
+    $('a').click(function(){
+      // $('#form').removeClass('active')
+      $(this.a).addClass('active')
+    })
+  })
+</script>
 </body>
 </html>

@@ -39,8 +39,24 @@ Route::post('create-new', 'DlhkCtr@createNew')->name('cn');
 Route::get('mac', 'DlhkCtr@macData')->name('mac');
 Route::post('sn', 'DlhkCtr@storeNew')->name('sn');
 Route::get('list', 'DLhkCtr@listLHK')->name('list');
-Route::get('print', 'DLhkCtr@printLHK')->name('pr');
+Route::get('print/{id}', 'DLhkCtr@printLHK')->name('pr');
 
 Route::get('sb', function(){
   return view('pages.test');
 });
+
+Route::get('index2', function(){
+  return view('index2');
+});
+
+Route::get('index3', function(){
+  return view('index3');
+});
+
+Route::get('graph-m', 'DlhkCtr@graphM')->name('graph-m');
+
+Route::get('timeline', function(){
+  return view('graph.timeline');
+})->name('timeline');
+
+Route::post('store-t', 'DlhkCtr@sTest')->name('store-t');

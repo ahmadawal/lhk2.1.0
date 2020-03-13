@@ -27,6 +27,7 @@
                 <th>SO No.</th>
                 <th>OP No.</th>
                 <th>Bobin</th>
+                <th>Type/Size</th>
                 <th>Customer</th>
                 <th>Operator/ Shift</th>
                 <th>Detail</th>
@@ -53,10 +54,11 @@
                   {{$i->bid4}}
                   {{$i->bid5}}
                 </td>
+                <td>{{$i->type}}</td>
                 <td>{{ $i->cus }}</td>
                 <td>{{ $i->op1 }}, {{ $i->op2 }}, {{ $i->op3 }}/ {{ $i->sh_d }}</td>
                 <td>
-                  <a href="">
+                  <a href="{{ route('pr', ['id' => $i->id_lhk ])}}">
                     Lihat <i class="fas fa-edit"></i>
                   </a>
                 </td>

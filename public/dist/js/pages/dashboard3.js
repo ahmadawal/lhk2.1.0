@@ -58,7 +58,7 @@ $(function () {
                 value /= 1000
                 value += 'k'
               }
-              return '$' + value
+              return value
             }
           }, ticksStyle)
         }],
