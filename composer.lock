@@ -4,121 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b526ae119acc57b5d48f4fde43dbca34",
+    "content-hash": "be6ab2fe983b9c792d46f9ba564d1c76",
     "packages": [
-        {
-            "name": "adldap2/adldap2",
-            "version": "v10.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Adldap2/Adldap2.git",
-                "reference": "f09ca4ae3a65dbf123b56dc7e4ace8682ea16cdb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Adldap2/Adldap2/zipball/f09ca4ae3a65dbf123b56dc7e4ace8682ea16cdb",
-                "reference": "f09ca4ae3a65dbf123b56dc7e4ace8682ea16cdb",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-ldap": "*",
-                "illuminate/contracts": "~5.0|~6.0",
-                "php": ">=7.0",
-                "psr/log": "~1.0",
-                "psr/simple-cache": "~1.0",
-                "tightenco/collect": "~5.0|~6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~6.0"
-            },
-            "suggest": {
-                "ext-fileinfo": "fileinfo is required when retrieving user encoded thumbnails"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Adldap\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Steve Bauman",
-                    "email": "steven_bauman@outlook.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A PHP LDAP Package for humans.",
-            "keywords": [
-                "active directory",
-                "ad",
-                "adLDAP",
-                "adldap2",
-                "directory",
-                "ldap",
-                "windows"
-            ],
-            "time": "2019-12-18T15:07:31+00:00"
-        },
-        {
-            "name": "adldap2/adldap2-laravel",
-            "version": "v6.0.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Adldap2/Adldap2-Laravel.git",
-                "reference": "c2809bcca39bd51fe3fbe426c5dc32e89a868a42"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Adldap2/Adldap2-Laravel/zipball/c2809bcca39bd51fe3fbe426c5dc32e89a868a42",
-                "reference": "c2809bcca39bd51fe3fbe426c5dc32e89a868a42",
-                "shasum": ""
-            },
-            "require": {
-                "adldap2/adldap2": "^10.1",
-                "illuminate/support": "~5.5|~6.0",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "~1.0",
-                "orchestra/testbench": "~3.7",
-                "phpunit/phpunit": "~7.0"
-            },
-            "type": "project",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Adldap\\Laravel\\AdldapServiceProvider",
-                        "Adldap\\Laravel\\AdldapAuthServiceProvider"
-                    ],
-                    "aliases": {
-                        "Adldap": "Adldap\\Laravel\\Facades\\Adldap"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Adldap\\Laravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "LDAP Authentication & Management for Laravel.",
-            "keywords": [
-                "adLDAP",
-                "adldap2",
-                "laravel",
-                "ldap"
-            ],
-            "time": "2019-09-03T16:03:04+00:00"
-        },
         {
             "name": "barryvdh/laravel-dompdf",
             "version": "v0.8.5",
@@ -1615,31 +1502,31 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.63",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8132daec326565036bc8e8d1876f77ec183a7bd6",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
-                "php": ">=5.5.9"
+                "league/mime-type-detection": "^1.3",
+                "php": "^7.2.5 || ^8.0"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7.10"
+                "phpspec/prophecy": "^1.11.1",
+                "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -1695,7 +1582,73 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-01-04T16:30:31+00:00"
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem/issues",
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
+            },
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
+            "time": "2021-06-23T21:56:05+00:00"
+        },
+        {
+            "name": "league/mime-type-detection",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/mime-type-detection.git",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\MimeTypeDetection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frankdejonge.nl"
+                }
+            ],
+            "description": "Mime-type detection for Flysystem",
+            "support": {
+                "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-18T20:58:21+00:00"
         },
         {
             "name": "league/oauth2-server",
@@ -4619,56 +4572,6 @@
             "time": "2019-12-18T13:41:29+00:00"
         },
         {
-            "name": "tightenco/collect",
-            "version": "v6.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tightenco/collect.git",
-                "reference": "75e997d1803c2e979ce6f314a5df8a97a8af93b0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/75e997d1803c2e979ce6f314a5df8a97a8af93b0",
-                "reference": "75e997d1803c2e979ce6f314a5df8a97a8af93b0",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "nesbot/carbon": "^2.23.0",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Collect/Support/helpers.php",
-                    "src/Collect/Support/alias.php"
-                ],
-                "psr-4": {
-                    "Tightenco\\Collect\\": "src/Collect"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "Collect - Illuminate Collections as a separate package.",
-            "keywords": [
-                "collection",
-                "laravel"
-            ],
-            "time": "2020-02-18T17:25:13+00:00"
-        },
-        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.2",
             "source": {
@@ -5336,59 +5239,6 @@
                 "symfony"
             ],
             "time": "2019-03-07T21:35:13+00:00"
-        },
-        {
-            "name": "pallares/laravel-nuxt",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/skyrpex/laravel-nuxt.git",
-                "reference": "9df92717f30b519d42b8da83b5b801ab7f09ebf2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/skyrpex/laravel-nuxt/zipball/9df92717f30b519d42b8da83b5b801ab7f09ebf2",
-                "reference": "9df92717f30b519d42b8da83b5b801ab7f09ebf2",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
-                "php": ">=7.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Pallares\\LaravelNuxt\\LaravelNuxtServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pallares\\LaravelNuxt\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cristian Pallarés",
-                    "email": "cristian@pallares.io",
-                    "homepage": "https://pallares.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Build a SPA with Laravel and Nuxt",
-            "homepage": "https://github.com/skyrpex/laravel-nuxt",
-            "keywords": [
-                "SPA",
-                "laravel",
-                "nuxt",
-                "vue"
-            ],
-            "time": "2019-09-05T14:27:19+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -6821,5 +6671,6 @@
     "platform": {
         "php": "^7.2"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
